@@ -21,5 +21,6 @@ Route::get('contact', function () {
 });
 Route::view('about', 'about');
 Route::view('blog', 'blog');
+Route::view('profile', 'profile');
 
 

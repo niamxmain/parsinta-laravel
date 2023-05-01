@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app', ['title' => 'Contact Page'])
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset ('css/app.css')}}">
-    <title>Contact</title>
-</head>
-
-<body>
-    @include('layouts.navbar')
-
-    this contact page
-</body>
-
-</html>
+@section('content')
+this is contact page
+@endsection
