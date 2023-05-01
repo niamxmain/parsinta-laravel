@@ -22,3 +22,20 @@ a:hover {
     padding: 10px;
     display: inline-block;
 }
+.alert {
+    background-color: darkorchid;
+    padding: 15px;
+    border-radius: 15px;
+}
+.header-alert {
+    background-color: aqua;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+.footer-alert {
+    background-color: azure;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
