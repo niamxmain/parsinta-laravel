@@ -2,3 +2,23 @@ body {
     background: #464444;
     color: white;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.navBar {
+    display: flex;
+    list-style-type: none;
+}
+
+.navBar li a {
+    padding: 10px;
+    display: inline-block;
+}

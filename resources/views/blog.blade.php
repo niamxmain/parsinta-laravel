@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset ('css/app.css')}}">
-    <title>Home Page</title>
+
+    <title>Blog</title>
 </head>
 
 <body>
     @include('layouts.navbar')
-
-    this is home page
+    this is blog page
 </body>
 
 </html>

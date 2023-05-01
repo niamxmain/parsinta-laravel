@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,11 @@
     <link rel="stylesheet" href="{{asset ('css/app.css')}}">
     <title>Contact</title>
 </head>
+
 <body>
+    @include('layouts.navbar')
+
     this contact page
 </body>
+
 </html>
