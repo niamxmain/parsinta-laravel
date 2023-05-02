@@ -1,3 +1,3 @@
-<x-app title="Profile Page">
-    <h3>Konten {{$name ?? 'Profile'}}</h3>
+<x-app title="{{$username ?? 'Profile Page'}}">
+    <h1>Konten {{$username ?? 'Profile'}} {{$lname}}</h1>
 </x-app>

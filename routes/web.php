@@ -22,7 +22,6 @@ Route::get('contact', function () {
 });
 Route::view('about', 'about');
 Route::view('blog', 'blog');
-Route::get('profile', function (Request $request) {
-    $name = $request->get('name');
-    return view('profile', ['name' => $name]);
+Route::get('/profile/{username}/{lname}', function ($username, $lname) {
+    return view('profile', ['username' => $username, 'lname' => $lname]);
 });
