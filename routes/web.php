@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::get('contact', function () {
 });
 Route::view('about', 'about');
 Route::view('blog', 'blog');
-Route::view('profile', 'profile');
-
-
+Route::get('profile', function (Request $request) {
+    $name = $request->get('name');
+    return view('profile', ['name' => $name]);
+});

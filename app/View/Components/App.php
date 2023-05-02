@@ -14,6 +14,7 @@ class App extends Component
     
     public $title;
     public $styles = null;
+    public $name = null;
     public function __construct($title = null)
     {
         $this->title = $title ?? 'niX';
