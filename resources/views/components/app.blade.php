@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    @include('layouts.navbar')
-    @yield('content')
+    <x-navbar></x-navbar>
 </body>
 
 </html>
