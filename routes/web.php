@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProfileIdentifierController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,4 @@ Route::get('/', HomeController::class);
 Route::view('about', 'about');
 Route::get('contact', [ContactController::class, 'index']);
 Route::post('contact', [ContactController::class, 'message']);
-Route::get('/profile/{username?}/{lname?}', function ($username = null, $lname = null) {
-    return view('profile', ['username' => $username, 'lname' => $lname]);
-})->whereAlphaNumeric('name');
+Route::get('profile/{username?}/{lname?}', [ProfileIdentifierController::class, '__invoke']);
