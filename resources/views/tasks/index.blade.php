@@ -7,7 +7,7 @@
     </form>
     <ul style="list-style-type: none;">
         @foreach ($tasks as $id => $task)
-        <li>{{$id + 1}}. {{$task->tugas}}<a href="/tasks/{{$task->id}}/edit" style="color: green">   Edit</a></li>
+        <li>{{$id + 1}}. {{$task->tugas}}<a href="/tasks/{{$task->id}}/edit" style="color: green"> Edit</a><a href="/tasks/{{$task->id}}">Delete</a></li>
         @endforeach
     </ul>
 </x-app>
