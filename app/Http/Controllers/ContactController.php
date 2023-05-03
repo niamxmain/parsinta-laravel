@@ -11,8 +11,10 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function message() 
+    public function message(Request $request) 
     {
-        dd('passing data');
+        return view('contact', [
+            'data' => $request->get('data'),
+        ]);
     }
 }

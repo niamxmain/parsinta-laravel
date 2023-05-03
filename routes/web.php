@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileIdentifierController;
+use App\Http\Controllers\TasksController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class);
-Route::view('about', 'about');
-Route::get('contact', [ContactController::class, 'index']);
-Route::post('contact', [ContactController::class, 'message']);
-Route::get('profile/{username?}/{lname?}', [ProfileIdentifierController::class, '__invoke']);
+Route::view('/about', 'about');
+Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact', [ContactController::class, 'message']);
+Route::get('/profile/{username?}/{lname?}', [ProfileIdentifierController::class, '__invoke']);
+
+Route::get('/tasks', [TasksController::class, 'index']);

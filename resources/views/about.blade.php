@@ -1,4 +1,4 @@
-<x-app title="About Page">
+<x-app title="{{$title ?? 'About Page'}}">
     @slot('styles')
     <style>
         body {
