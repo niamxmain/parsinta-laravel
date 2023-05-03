@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,11 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class);
-Route::get('contact', function () {
-    return view('contact');
-});
 Route::view('about', 'about');
-Route::view('blog', 'blog');
+Route::get('contact', [ContactController::class, 'index']);
+Route::post('contact', [ContactController::class, 'message']);
 Route::get('/profile/{username?}/{lname?}', function ($username = null, $lname = null) {
     return view('profile', ['username' => $username, 'lname' => $lname]);
 })->whereAlphaNumeric('name');
