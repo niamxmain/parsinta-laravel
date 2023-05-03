@@ -10,7 +10,8 @@ class ProfileIdentifierController extends Controller
     {
         return view('profile', [
             'username' => $username,
-            'lname' => $lname
+            'lname' => $lname,
+            'fname' => $request->get('fname')
         ]);
     }
 }
