@@ -22,6 +22,7 @@ Route::get('/', HomeController::class);
 Route::view('/about', 'about');
 Route::get('/contact', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'message']);
-Route::get('/profile/{username?}/{lname?}', [ProfileIdentifierController::class, '__invoke']);
+Route::get('/profile/{username?}/{lname?}', [ProfileIdentifierController::class, 'index']);
 
 Route::get('/tasks', [TasksController::class, 'index']);
+Route::post('/tasks', [TasksController::class, 'addTask']);
