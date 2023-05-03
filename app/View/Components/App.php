@@ -12,12 +12,12 @@ class App extends Component
      * Create a new component instance.
      */
     
-    public $title;
+    public $title = null;
     public $styles = null;
     public $name = null;
     public function __construct($title = null)
     {
-        $this->title = $title ?? 'niX';
+        $this->title = $title ?? 'Home';
     }
 
     /**

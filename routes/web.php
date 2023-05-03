@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,14 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', HomeController::class);
 Route::get('contact', function () {
     return view('contact');
 });
 Route::view('about', 'about');
 Route::view('blog', 'blog');
-Route::get('/profile/{username}/{lname}', function ($username, $lname) {
+Route::get('/profile/{username?}/{lname?}', function ($username = null, $lname = null) {
     return view('profile', ['username' => $username, 'lname' => $lname]);
-});
+})->whereAlphaNumeric('name');
