@@ -26,3 +26,5 @@ Route::get('/profile/{username?}/{lname?}', [ProfileIdentifierController::class,
 
 Route::get('/tasks', [TasksController::class, 'index']);
 Route::post('/tasks', [TasksController::class, 'addTask']);
+Route::get('/tasks/{id}/edit', [TasksController::class, 'editTask']);
+Route::put('/tasks/{id}', [TasksController::class, 'updateTask']);
