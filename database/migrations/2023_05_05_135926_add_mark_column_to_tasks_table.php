@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->enum('mark', ['belum','selesai'])->default('belum')->after('tugas');
+            $table->boolean('mark')->after('tugas')->default(false);
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->enum('mark', ['belum','selesai'])->default('belum')->after('tugas');
+            $table->dropColumn('mark');
         });
     }
 };
