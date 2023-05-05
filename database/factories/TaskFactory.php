@@ -17,7 +17,7 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            'tugas' => $this->faker->sentence(7),
+            'tugas' => $this->faker->sentence(),
             'mark' => rand(0, 1),
         ];
     }
