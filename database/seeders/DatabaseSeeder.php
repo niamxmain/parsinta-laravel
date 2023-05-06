@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\User;
 use App\Models\Task;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -29,6 +28,7 @@ class DatabaseSeeder extends Seeder
                     'email_verified_at' => Carbon::now(),
                     'created_at' => now(),
                     'updated_at' => now()->addHour(),
+                    'remember_token' => null,
                 ],
                 [
                     'name' => 'niam',
@@ -37,9 +37,10 @@ class DatabaseSeeder extends Seeder
                     'email_verified_at' => Carbon::now(),
                     'created_at' => now(),
                     'updated_at' => now(),
+                    'remember_token' => null,
                 ]
             ])->each(function($user){
-                DB::table('users')->insert($user);
+                DB::table('users')->create($user);
             });
             //jika menggunakan data asli maka langsung tembak DB
             //jika menggunakan dummy data / factory lebih baik import class [use App\Models\Name]
