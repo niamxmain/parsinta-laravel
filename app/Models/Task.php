@@ -9,5 +9,9 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    //jika guarded untuk website sendiri karena inputan mudah untuk dimanipulasi
+    // protected $guarded = [];
+    //gunakakan fillable dengan key untuk data yang hanya bs di input 
+    // protected $fillable = ['tugas'];
+    protected $fillable = ['tugas'];
 }
