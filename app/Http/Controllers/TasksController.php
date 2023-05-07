@@ -18,10 +18,7 @@ class TasksController extends Controller
     public function addTask(Request $request) 
     {
         // if use [insert] will return bool, and if [create] will return datas
-        Task::create([
-            'tugas' => $request->newTask,
-            'mark' => true,
-        ]);
+        Task::create($request->all());
         return back();
     }
 
@@ -35,7 +32,7 @@ class TasksController extends Controller
     public function updateTask(Request $request, $id)
     {
         Task::find($id)->update([
-            'tugas' => $request->task
+            'task' => $request->task
         ]);
         return redirect('/tasks');
     }

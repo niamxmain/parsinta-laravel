@@ -12,6 +12,5 @@ class Task extends Model
     //jika guarded untuk website sendiri karena inputan mudah untuk dimanipulasi
     // protected $guarded = [];
     //gunakakan fillable dengan key untuk data yang hanya bs di input 
-    // protected $fillable = ['tugas'];
-    protected $fillable = ['tugas'];
+    protected $fillable = ['task', ];
 }

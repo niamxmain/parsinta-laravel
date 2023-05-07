@@ -3,7 +3,7 @@
     <form action="/tasks/{{$task->id}}" method="post">
         @method('put')
         @csrf
-        <input type="text" name="task" value="{{$task->tugas}}">
+        <input type="text" name="task" value="{{$task->task}}">
         <button type="submit">Update</button>
     </form>
 </x-app>
