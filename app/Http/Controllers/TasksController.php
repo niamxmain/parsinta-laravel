@@ -19,7 +19,8 @@ class TasksController extends Controller
     {
         // if use [insert] will return bool, and if [create] will return datas
         Task::create([
-            'tugas' => $request->newTask
+            'tugas' => $request->newTask,
+            'mark' => true,
         ]);
         return back();
     }
